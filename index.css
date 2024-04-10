@@ -6,14 +6,35 @@
 .contenu{
     display: flex;
     justify-content: space-around;
+    
 
+}
+h1{
+    font-size: 40px;
+    color:green ;
+    
 }
 .container{
     margin: 20px;
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.603);
+    border-radius: 20px;
+    width:300px ;
+    height:400px ;
+    gap: 40px;
+    cursor: crosshair;
+    overflow: hidden;
+    
+
+    
 
 }
 input{
@@ -21,32 +42,61 @@ input{
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.308);
 }
-.btn-add{
-    background-color:rgb(155, 101, 0);
+.btn-add {
+    background-color: rgb(155, 101, 0);
     color: white;
     font-size: 15px;
     border: 1px solid white;
     width: 100px;
     height: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0, 155, 0);
-
+    box-shadow: 0 0 10px rgb(155, 101, 0);
+    animation: pule 1s infinite alternate; 
 }
+
+@keyframes pule {
+    from {
+        transform: scale(1); 
+    }
+    to {
+        transform: scale(1.1); 
+    }
+}
+
+
+.btn-add:hover {
+    animation: none; 
+    transform: scale(1.1); 
+}
+
 .vertical-line {
-    width: 5px; /* Largeur de la ligne */
-    height: 100%; /* Hauteur de la ligne */
-    background-color:  rgba(0, 155, 0, 0.582); /* Couleur de la ligne */
-    position: absolute; /* Position absolue pour la placer correctement */
-    left: 50%; /* Position horizontale au centre de la page */
-    top: 0; /* Position verticale au sommet de la page */
-    transform: translateX(-50%); /* Déplacement de 50% de la largeur vers la gauche pour centrer la ligne */
-  }
+    width: 5px; 
+    height: 100%; 
+    background-color: rgba(0, 155, 0, 0.582);
+    position: absolute; 
+    left: 50%; 
+    top: 0; 
+    transform: translateX(-50%);
+    transition: height 0.3s, background-color 0.3s; 
+}
+
+.vertical-line:hover {
+    height: 20px; 
+    background-color:  rgb(155, 101, 0); 
+}
+
+
+.vertical-line:hover {
+    transition: height 1s ease, background-color 1s ease;
+}
+
+ 
   .classUl{
   
     margin-top: 200px; 
     ;
   
-   
+
  
   }
   .edit{
